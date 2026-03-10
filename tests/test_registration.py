@@ -6,7 +6,7 @@ from variables import (USER_NAME,
                        USER_PASS_6_SIMB,
                        USER_PASS_5_SIMB)
 import locators
-from conftest import generate_login
+from helpers import generate_login
 
 
 class TestRegistration:
@@ -16,7 +16,7 @@ class TestRegistration:
             driver_chrome):
         driver_chrome.find_element(By.XPATH, locators.PERSONAL_ACCOUNT).click()
         driver_chrome.find_element(By.XPATH,
-                                   locators.REG_BUTTON_ON_LOGIN_PAGE).click()
+                                   locators.REG_BUTTON_ON_AUTH_PAGE).click()
         test_email = generate_login()
         driver_chrome.find_element(By.XPATH,
                                    locators.REG_NAME_INPUT
@@ -38,7 +38,7 @@ class TestRegistration:
             driver_chrome):
         driver_chrome.find_element(By.XPATH, locators.PERSONAL_ACCOUNT).click()
         driver_chrome.find_element(By.XPATH,
-                                   locators.REG_BUTTON_ON_LOGIN_PAGE).click()
+                                   locators.REG_BUTTON_ON_AUTH_PAGE).click()
         test_email = generate_login()
         driver_chrome.find_element(By.XPATH,
                                    locators.REG_NAME_INPUT

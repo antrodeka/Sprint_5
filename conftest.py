@@ -9,9 +9,6 @@ from variables import (USER_EMAIL,
                        URL_MAIN_PAGE)
 import locators
 
-import random
-import string
-
 
 @pytest.fixture(scope="function")
 def driver_chrome():
@@ -35,10 +32,4 @@ def driver_with_login_user(driver_chrome):
             5).until(expected_conditions.visibility_of_element_located(
                 (By.XPATH,
                  locators.ORDER_BUTTON)))
-    yield driver_chrome
-
-
-def generate_login():
-    characters = string.ascii_lowercase + string.digits
-    username = ''.join(random.choice(characters) for _ in range(6))
-    return f"{username}@ya.ru"
+    return driver_chrome
