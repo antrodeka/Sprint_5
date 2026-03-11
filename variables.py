@@ -1,0 +1,5 @@
+URL_MAIN_PAGE = 'https://stellarburgers.education-services.ru/'
+USER_NAME = 'Test_name'
+USER_EMAIL = 'korotkova_41_123@ya.ru'
+USER_PASS_6_SIMB = '123456'
+USER_PASS_5_SIMB = '12345'
